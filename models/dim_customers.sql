@@ -18,7 +18,7 @@ WITH customers_orders AS (
     FROM
         {{ ref('stg_jaffle_shop__orders') }}
     GROUP BY
-        user_id
+        customer_id
 )
 SELECT
     c.customer_id,
@@ -31,4 +31,4 @@ FROM
     {{ ref('stg_jaffle_shop__customers') }} AS c
 LEFT JOIN
     customers_orders AS co
-        ON co.customer_id = c.id
+        ON co.customer_id = c.customer_id

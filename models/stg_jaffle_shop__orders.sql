@@ -4,4 +4,4 @@ SELECT
     order_date,
     status
 FROM
-    dbtworkshop.orders
+    jaffle_shop.orders

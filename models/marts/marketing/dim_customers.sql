@@ -3,11 +3,13 @@
 ---- If you want to create a table instead of a view, use the 'config' statement shown below
 ---- If you want to run only a specific script, trigger the command 'dbt run --select <script_name>'
 
+/* This is already being configured more broadly for the folder in the "dbt_project.yml"
 {{
     config(
         materialized='table'
     )
 }}
+*/
 
 WITH customers_orders AS (
     SELECT

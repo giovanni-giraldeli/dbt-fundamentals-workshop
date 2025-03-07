@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: dbtworkshop_dw
+    schema: stripe
+    freshness: 
+      error_after:
+        count: 2
+        period: day
+      warn_after:
+        count: 1
+        period: day
+    loaded_at_field: CAST(DATE(created) AS TIMESTAMP)
+    tables:
+      - name: payment

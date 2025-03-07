@@ -14,3 +14,8 @@ sources:
     loaded_at_field: CAST(DATE(created) AS TIMESTAMP)
     tables:
       - name: payment
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: dbtworkshop_dw
+    schema: stripe
+    tables:
+      - name: payment

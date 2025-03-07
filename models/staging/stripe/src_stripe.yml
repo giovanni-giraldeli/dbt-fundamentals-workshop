@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: stripe
+    description: A clone of external data provided by the payment provider Stripe.
     database: dbtworkshop_dw
     schema: stripe
     freshness: 
@@ -14,8 +15,10 @@ sources:
     loaded_at_field: CAST(DATE(created) AS TIMESTAMP)
     tables:
       - name: payment
+        description: One row per payment.
         columns:
           - name: id
+            description: Primary key.
             tests:
               - unique
               - not_null

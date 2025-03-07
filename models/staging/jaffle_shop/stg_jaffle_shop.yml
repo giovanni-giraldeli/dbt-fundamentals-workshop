@@ -2,18 +2,18 @@ version: 2
 
 models:
   - name: stg_jaffle_shop__customers
-    description: one unique customer per row
+    description: One unique customer per row.
     columns:
       - name: customer_id
-        description: primary key
+        description: Primary key.
         data_tests:
           - unique
           - not_null
   - name: stg_jaffle_shop__orders
-    description: one order per row
+    description: One order per row.
     columns:
       - name: order_id
-        description: primary key
+        description: Primary key.
         data_tests:
           - unique
           - not_null
@@ -28,6 +28,7 @@ models:
                 - returned
                 - placed
       - name: customer_id
+        description: Foreign key to reference customers.
         data_tests:
           - relationships:
               to: ref('stg_jaffle_shop__customers')

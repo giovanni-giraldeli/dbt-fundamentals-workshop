@@ -3,7 +3,8 @@ SELECT
     orderid AS order_id,
     paymentmethod AS payment_method,
     status,
-    amount / 100 AS amount,
+    -- Calling a macro to standardize how to convert cents to dollars
+    {{ cents_to_dollars('amount') }} AS amount,
     created AS created_at
 FROM
     {{ source('stripe', 'payment') }}

@@ -1,0 +1,10 @@
+# Get packages in:
+# -hub.getdbt.com
+# -directly from a Github repo copying the URL of the project
+# -locally when you add the code in the same Git project by specifying the folder containing the code
+
+# After listing the packages in this file, run the command "dbt deps" to clone and install the dependencies from these sources
+
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.3.0

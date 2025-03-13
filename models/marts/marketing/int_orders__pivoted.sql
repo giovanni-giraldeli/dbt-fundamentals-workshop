@@ -1,3 +1,4 @@
+/* {#
 -- Jinja >> lists, dicts, if, for
 ---- {% : start the Jinja statement logic
 ------ {%- : start the Jinja statement logic trimming whitespace before it
@@ -6,6 +7,7 @@
 ---- {% end<statement> %} : end statement execution
 ---- {{  }} : call a Jinja value
 ---- {# ... #} : comment
+*/
 
 {%- set payment_methods = ['bank_transfer', 'coupon', 'credit_card', 'gift_card'] -%}
 
